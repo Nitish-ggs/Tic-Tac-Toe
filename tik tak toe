@@ -1,0 +1,155 @@
+import os
+lst = [["_","_","_"],["_","_","_"],["_","_","_"]]
+x = 2
+y = True
+
+while y == True:
+    os.system('cls')
+
+    for i in lst:
+        print(i)
+        print()
+
+    if x%2 == 0:
+        print("'X' Turn")
+        #inp = input("Enter 'X' Or 'O': ")
+        pos_X = int(input("Enter The X Value Position: "))
+        pos_Y = int(input("Enter The Y Value Position: "))
+        lst[pos_X][pos_Y] = "X"
+        x += 1
+        
+        if lst[0][0] == "X" and lst[1][1] == "X" and lst[2][2] == "X":
+            print("X WON THE GAME")
+            x = False
+        elif lst[0][0] == "O" and lst[1][1] == "O" and lst[2][2] == "O":
+            print("O WON THE GAME")
+            x = False
+        
+        # FIRST ROW
+        elif lst[0][0] == "O" and lst[0][1] == "O" and lst[0][2] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[0][0] == "X" and lst[0][1] == "X" and lst[0][2] == "X":
+            print("X WON THE GAME")
+            x = False
+        #SECOND ROW
+        elif lst[1][0] == "O" and lst[1][1] == "O" and lst[1][2] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[1][0] == "X" and lst[1][1] == "X" and lst[1][2] == "X":
+            print("X WON THE GAME")
+            x = False
+        #Third Row
+        elif lst[2][0] == "O" and lst[2][1] == "O" and lst[2][2] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[2][0] == "X" and lst[2][1] == "X" and lst[2][2] == "X":
+            print("X WON THE GAME")
+            x = False
+
+        #First COLOMN
+        elif lst[0][0] == "O" and lst[1][0] == "O" and lst[2][0] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[0][0] == "X" and lst[1][0] == "X" and lst[2][0] == "X":
+            print("X WON THE GAME")
+            x = False
+
+        #Second COLOMN
+        elif lst[0][1] == "O" and lst[1][1] == "O" and lst[2][1] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[0][1] == "X" and lst[1][1] == "X" and lst[2][1] == "X":
+            print("X WON THE GAME")
+            x = False
+
+        #Third Colomn
+        elif lst[0][2] == "O" and lst[1][2] == "O" and lst[2][2] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[0][2] == "X" and lst[1][2] == "X" and lst[2][2] == "X":
+            print("X WON THE GAME")
+            x = False
+        
+
+
+        else:
+            continue
+
+        
+        count = 0
+        for i in range(3):
+            for j in range(3):
+                if lst[i][j] == "_":
+                    continue
+                else:
+                    y = False
+
+    elif x%2 != 0:
+        print("'O' Turn")
+        pos_X = int(input("Enter The X Value Position: "))
+        pos_Y = int(input("Enter The Y Value Position: "))
+        lst[pos_X][pos_Y] = "O"
+        x += 1
+        
+        if lst[0][0] == "X" and lst[1][1] == "X" and lst[2][2] == "X":
+            print("X WON THE GAME")
+            x = False
+        elif lst[0][0] == "O" and lst[1][1] == "O" and lst[2][2] == "O":
+            print("O WON THE GAME")
+            x = False
+        # FIRST ROW
+        elif lst[0][0] == "O" and lst[0][1] == "O" and lst[0][2] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[0][0] == "X" and lst[0][1] == "X" and lst[0][2] == "X":
+            print("X WON THE GAME")
+            x = False
+        #SECOND ROW
+        elif lst[1][0] == "O" and lst[1][1] == "O" and lst[1][2] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[1][0] == "X" and lst[1][1] == "X" and lst[1][2] == "X":
+            print("X WON THE GAME")
+            x = False
+        #Third Row
+        elif lst[2][0] == "O" and lst[2][1] == "O" and lst[2][2] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[2][0] == "X" and lst[2][1] == "X" and lst[2][2] == "X":
+            print("X WON THE GAME")
+            x = False
+
+        #First COLOMN
+        elif lst[0][0] == "O" and lst[1][0] == "O" and lst[2][0] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[0][0] == "X" and lst[1][0] == "X" and lst[2][0] == "X":
+            print("X WON THE GAME")
+            x = False
+
+        #Second COLOMN
+        elif lst[0][1] == "O" and lst[1][1] == "O" and lst[2][1] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[0][1] == "X" and lst[1][1] == "X" and lst[2][1] == "X":
+            print("X WON THE GAME")
+            x = False
+
+        #Third Colomn
+        elif lst[0][2] == "O" and lst[1][2] == "O" and lst[2][2] == "O":
+            print("O WON THE GAME")
+            x = False
+        elif lst[0][2] == "X" and lst[1][2] == "X" and lst[2][2] == "X":
+            print("X WON THE GAME")
+            x = False
+        else:
+            continue
+        for i in range(3):
+            for j in range(3):
+                if lst[i][j] == "_":
+                    continue
+                else:
+                    print("DRAW")
+                    y = False
+
